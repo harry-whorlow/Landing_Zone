@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # Static homepage generator
 
 ## Installation
