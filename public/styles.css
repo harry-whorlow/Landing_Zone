@@ -1,0 +1,17 @@
+/** @format */
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    box-sizing: border-box;
+}
+
+canvas {
+    background-color: black;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+}
