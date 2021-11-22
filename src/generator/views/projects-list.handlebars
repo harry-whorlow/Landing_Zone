@@ -1,0 +1,12 @@
+<section class="page">
+    <h1>{{labels.projects.title}}</h1>
+    <p>{{ labels.projects.subtitle }}</p>
+    {{{pageContent}}}
+    <ul class = "projects-url">
+        {{#projects}}
+            <li>
+                <a href="{{getProjectLink .}}">{{title}}</a>
+            </li>
+        {{/projects}}
+    </ul>
+</section>

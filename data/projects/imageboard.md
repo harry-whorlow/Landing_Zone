@@ -1,5 +1,5 @@
 ---
-title: Social Network
+title: Image Board
 template: project
 ---
 

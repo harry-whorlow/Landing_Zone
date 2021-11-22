@@ -1,3 +1,5 @@
+/** @format */
+
 import path from "path";
 import { dirname, filename } from "dirname-filename-esm";
 import { createRequire } from "module";
@@ -7,6 +9,8 @@ import { marked } from "marked";
 import matter from "gray-matter";
 import express from "express";
 import { engine } from "express-handlebars";
+import chalk from "chalk";
+import helpers from "./helpers.js";
 
 const __dirname = dirname(import.meta);
 const require = createRequire(import.meta.url);
@@ -20,10 +24,14 @@ const { readFile, outputFile } = fs;
 
 const app = express();
 
-app.engine("handlebars", engine());
+app.engine("handlebars", engine({ helpers }));
 app.set("view engine", "handlebars");
+app.set("layoutsDir", path.join(__dirname, "views", "layouts"));
 app.set("views", path.join(__dirname, "views"));
-app.set("layoutsDir", path.join(__dirname, "views/layouts"));
+
+function log(data) {
+    console.log(chalk.cyan(`[generator] ${data}`));
+}
 
 async function loadMarkdown() {
     const mdFiles = await globby("**/*.md", { cwd: DATA_PATH });
@@ -47,6 +55,7 @@ const DEFAULT_TEMPLATE = "_default";
 
 function renderPage(page) {
     return new Promise((resolve, reject) => {
+        log(`Generating ${chalk.yellow(page.id)}...`);
         app.render(
             page.template || DEFAULT_TEMPLATE,
             {
@@ -70,15 +79,30 @@ function renderPage(page) {
 }
 
 (async () => {
+    log(`Getting data from ${chalk.yellow(DATA_PATH)}:`);
     const data = await loadMarkdown();
-    const results = await Promise.all([
-        ...data.map(renderPage),
-        renderPage({
+    const pages = [
+        ...data,
+        {
             title: "Home",
-            id: "homepage",
+            id: "index",
             outputFileName: "index",
-            template: "homepage",
-        }),
-    ]);
-    console.log(`Generated ${results.length} pages`);
+            template: "index",
+        },
+        {
+            title: "Projects",
+            id: "projects",
+            outputFileName: "projects",
+            template: "projects-list",
+            projects: data.filter((x) => x.id.startsWith("project")),
+        },
+    ];
+
+    try {
+        const results = await Promise.all(pages.map(renderPage));
+        log(`Generated ${chalk.yellow(results.length)} pages`);
+    } catch (error) {
+        console.log(chalk.red(`[generator] Error generating site`));
+        console.log(error);
+    }
 })();
