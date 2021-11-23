@@ -81,6 +81,7 @@ function renderPage(page) {
 (async () => {
     log(`Getting data from ${chalk.yellow(DATA_PATH)}:`);
     const data = await loadMarkdown();
+
     const pages = [
         ...data,
         {

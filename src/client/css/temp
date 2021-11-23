@@ -1,0 +1,88 @@
+/**
+ * /* .perspective {
+ *     perspective: 100rem;
+ * }
+ * 
+ * .projects ul {
+ *     list-style: none;
+ * 
+ *     transform-style: preserve-3d;
+ *     transform: rotateY(-40deg);
+ * }
+ * 
+ * .projects li {
+ *     border-radius: 5px;
+ *     transition: transform 1s;
+ * }
+ * 
+ * .projects a {
+ * }
+ * 
+ * .projects li:hover {
+ *     border-radius: 5px;
+ * 
+ *     box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+ *     transform: scale(1.05);
+ * }
+ * 
+ * .grid-image {
+ *     top: 0;
+ *     left: 0;
+ * 
+ *     height: 100%;
+ *     width: 100%;
+ *     border-radius: 5px;
+ * 
+ *     object-fit: cover;
+ * }
+ * 
+ * .grid-image:hover {
+ *     background-image: url("petition-dark");
+ * }
+ * 
+ * .projects-grid {
+ *     display: grid;
+ *     grid-auto-columns: 1fr;
+ *     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+ *     grid-template-rows: 1fr 1fr;
+ *     gap: 15px 15px;
+ *     grid-template-areas:
+ *         "petition petition socialNetwork socialNetwork socialNetwork socialNetwork"
+ *         "imageBoard imageBoard socialNetwork socialNetwork socialNetwork socialNetwork";
+ * }
+ * 
+ * .petition {
+ *     grid-area: petition;
+ * }
+ * 
+ * .imageBoard {
+ *     grid-area: imageBoard;
+ * }
+ * 
+ * .socialNetwork {
+ *     grid-area: socialNetwork;
+ * }
+ *
+ * @format
+ */
+
+/* 
+
+-----------------------
+
+ <section class="perspective grid">
+        <h1>{{labels.projects.title}}</h1>
+        <p>{{ labels.projects.subtitle }}</p>
+        {{{pageContent}}}
+
+        <ul class = "projects-url projects-grid perspective">
+            {{#projects}}
+                <li class="{{class}} petition">
+                    <a href="{{getProjectLink .}}">
+                        <img src="/assets/{{cover.default}}" class="grid-image default" />
+                        <img src="/assets/{{cover.hover}}" class="grid-image hover" />
+                    </a>
+                </li>
+            {{/projects}}
+        </ul>
+    </section> */

@@ -5,9 +5,17 @@
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes"/>
         <title>{{title}} | {{config.defaultTitle}}</title>
         <link rel="stylesheet" href="/bundle.css"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&family=Oswald&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body class="{{id}}">
+        {{#unless (isHome id)}}
         {{>nav}}
+        {{/unless}}
         <main>
         {{{body}}}
         </main>

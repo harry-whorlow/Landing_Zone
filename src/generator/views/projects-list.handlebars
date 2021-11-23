@@ -1,12 +1,30 @@
-<section class="page">
-    <h1>{{labels.projects.title}}</h1>
-    <p>{{ labels.projects.subtitle }}</p>
-    {{{pageContent}}}
-    <ul class = "projects-url">
-        {{#projects}}
-            <li>
-                <a href="{{getProjectLink .}}">{{title}}</a>
-            </li>
-        {{/projects}}
-    </ul>
+<canvas id="venom-particles"></canvas>
+
+<section class="projects-first-section">
+
+    <div class="projects-info">
+        <h1>{{labels.projects.title}}</h1>
+        <p>{{labels.projects.subtitle}}</p>
+
+        {{{pageContent}}}
+    </div>
+
+    <div class="perspective">
+        <ul class="container">
+            {{#projects}}
+                <li class="{{class}}">
+                    <a href="#">
+                        <img
+                            src="/assets/{{cover.default}}"
+                            class="grid-image default"
+                        />
+                        <img
+                            src="/assets/{{cover.hover}}"
+                            class="grid-image hover"
+                        />
+                    </a>
+                </li>
+            {{/projects}}
+        </ul>
+    </div>
 </section>

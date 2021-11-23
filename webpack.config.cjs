@@ -1,6 +1,10 @@
+/** @format */
+
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
+const WriteFilePlugin = require("write-file-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const config = {
     entry: [
@@ -37,6 +41,15 @@ const config = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "bundle.css",
+        }),
+        new WriteFilePlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "./src/client/assets",
+                    to: "assets",
+                },
+            ],
         }),
     ],
 };
