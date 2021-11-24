@@ -7,8 +7,6 @@ cover:
 class: petition
 ---
 
-<!-- @format -->
-
 this
 
 -   express;

@@ -8,8 +8,6 @@ cover:
 class: imageBoard
 ---
 
-<!-- @format -->
-
 In the social network project I used the following technologies:
 
 -   Express;

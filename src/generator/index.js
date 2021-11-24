@@ -1,5 +1,3 @@
-/** @format */
-
 import path from "path";
 import { dirname, filename } from "dirname-filename-esm";
 import { createRequire } from "module";

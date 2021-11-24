@@ -1,5 +1,3 @@
-/** @format */
-
 (() => {
     if (document.getElementById("vector-field")) {
         vectorField();

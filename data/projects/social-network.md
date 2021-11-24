@@ -7,8 +7,6 @@ cover:
 class: socialNetwork
 ---
 
-<!-- @format -->
-
 In the social network project I used the following technologies:
 
 -   express;
