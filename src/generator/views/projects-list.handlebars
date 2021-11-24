@@ -6,7 +6,17 @@
         <h1>{{labels.projects.title}}</h1>
         <p>{{labels.projects.subtitle}}</p>
 
-        {{{pageContent}}}
+        <div class="projects-code-links">
+            <a
+                href="https://github.com/TheAngryEnglishman"
+                target="blank"
+            >GitHub</a>
+
+            {{! <a
+                href="https://github.com/TheAngryEnglishman"
+                target="blank"
+            >codepen</a> }}
+        </div>
     </div>
 
     <div class="perspective">
@@ -26,5 +36,20 @@
                 </li>
             {{/projects}}
         </ul>
+    </div>
+</section>
+<hr class="divider" />
+<section class="projects-second-section">
+    <div class="social-network-project">
+        {{> socialNetwork}}
+    </div>
+    <hr class="subdivider" />
+    <div class="image-board-project">
+        {{> imageBoard}}
+
+    </div>
+    <hr class="subdivider" />
+    <div class="petition-project">
+        {{> petition}}
     </div>
 </section>

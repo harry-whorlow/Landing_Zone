@@ -3,7 +3,7 @@
 
 :root {
     --ff-primary: "Noto Sans Display", sans-serif;
-    --ff-accent: "Oswald", sans-serif;
+    --ff-accent: "sans-serif", sans-serif;
 }
 * {
     box-sizing: border-box;
@@ -81,6 +81,14 @@ footer {
 }
 
 .index h1 {
+    background: -webkit-linear-gradient(
+        45deg,
+        rgb(153, 101, 6),
+        rgb(97, 0, 121)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     font-family: var(--ff-accent);
     font-size: 11rem;
 
@@ -99,7 +107,6 @@ footer {
     text-align: center;
     line-height: 3rem;
 
-    color: white;
     background-color: rgba(255, 255, 255, 0.8);
 
     text-decoration: none;
@@ -108,6 +115,8 @@ footer {
 }
 
 .index nav a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem white;
 }
 
 /*ABOUT*/
@@ -126,25 +135,75 @@ footer {
     flex: 1;
 
     /* background-color: rgba(255, 255, 255, 0.7); */
-
-    min-width: 1200px;
 }
 
 /*PROJECTS*/
 /*------------------------*/
+.projects nav a {
+    color: white;
+
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+
+    display: inline-block;
+
+    text-align: center;
+    line-height: 3rem;
+
+    text-decoration: none;
+}
+
+.projects nav a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem white;
+}
+
 .projects {
     /* background-color: black; */
+    /* height: ; */
+}
+
+.projects h1 {
+    background: -webkit-linear-gradient(
+        45deg,
+        rgb(153, 101, 6),
+        rgb(97, 0, 121)
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 3.5rem;
+    font-weight: 10000;
+}
+
+.projects p {
+    width: 300px;
+
+    font-family: var(--ff-accent);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    text-align: center;
+
+    color: white;
 }
 
 .projects-first-section {
     height: 100vh;
     width: 100vh;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+
+    margin: 0 auto;
+    margin-bottom: 0;
 }
 .perspective {
-    perspective: 100rem;
+    perspective: 50rem;
+    flex: 1;
 }
 
 ul {
@@ -152,16 +211,16 @@ ul {
     padding: 0;
     list-style: none;
     transform-style: preserve-3d;
-    transform: rotateY(-40deg);
+    transform: rotateY(-30deg);
 }
 
 .container {
-    height: 400px;
+    height: 500px;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0.5rem 0.5rem;
+    gap: 1rem 1rem;
     grid-template-areas:
         "petition petition socialNetwork socialNetwork socialNetwork socialNetwork"
         "imageBoard imageBoard socialNetwork socialNetwork socialNetwork socialNetwork";
@@ -199,6 +258,15 @@ ul {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+.container li {
+    transition: 1s;
+}
+
+.container li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+}
+
 .container > li a:hover img {
     opacity: 0.8;
 }
@@ -215,6 +283,118 @@ ul {
     transform: translateX(0);
 }
 
+.projects-info {
+    padding: 5px 5px 30px 5px;
+
+    width: 310px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+}
+
+.projects-code-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-info a {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    color: white;
+
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    line-height: 2rem;
+    padding: 5px;
+
+    border-radius: 5px;
+
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    display: inline-block;
+
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+.projects-info a:hover {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(206, 69, 211),
+        rgb(113, 36, 136)
+    );
+
+    display: inline-block;
+
+    transform: scale(1.05);
+}
+/*---*/
+.projects-second-section {
+    margin-top: 0;
+    background: radial-gradient(#2c2c2c, #000000);
+    height: 1000px;
+
+    padding: 3rem, 1rem, 1rem, 1rem;
+}
+
+.divider {
+    background-color: white;
+    width: 80%;
+    margin: 0;
+}
+
+.subdivider {
+    background-color: rgb(129, 129, 129);
+    width: 60%;
+}
+.social-network-project h2 {
+    margin-top: 0;
+    background: -webkit-linear-gradient(
+        90deg,
+        rgb(56, 179, 172),
+        rgb(22, 78, 92)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects-second-section h2 {
+    font-size: 2.5rem;
+}
+
+.image-board-project h2 {
+    background: -webkit-linear-gradient(
+        left,
+        rgb(194, 136, 29),
+        rgb(97, 0, 121) 30%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.petition-project h2 {
+    background: -webkit-linear-gradient(
+        left,
+        rgb(56, 179, 172),
+        rgb(36, 97, 112) 15%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 /*CANVAS*/
 /*------------------------*/
 canvas {
@@ -231,8 +411,8 @@ canvas {
 }
 
 #venom-particles {
-    /* background: black; */
     position: absolute;
+    background: black;
 
     top: 0;
     left: 0;

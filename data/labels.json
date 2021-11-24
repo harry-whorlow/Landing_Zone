@@ -4,7 +4,19 @@
         "subtitle": "Here I talk about stuff"
     },
     "projects": {
-        "title": "projects",
-        "subtitle": "hello"
+        "title": "PROJECTS",
+        "subtitle": "Scroll down for a brief description of the technologies involved or click the images to be taken to the full description. Or alternatively, check out the code linked below."
+    },
+    "projects-social-network": {
+        "title": "SOCIAL NETWORK",
+        "content": "A simple single page web application with features such as account registration and login, profile editing, friends list and a chat feature. Built with React, Express, SQL, amazon web services S3, Sockets and Bcrypt"
+    },
+    "projects-image-board": {
+        "title": "IMAGE BOARD",
+        "content": "hello"
+    },
+    "projects-petition": {
+        "title": "PETITION",
+        "content": "hello"
     }
 }

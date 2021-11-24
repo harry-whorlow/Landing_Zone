@@ -71,12 +71,13 @@ function vectorField() {
                 this.#width,
                 this.#height
             );
-            // this.gradient.addColorStop("0.1", "#ff5c33");
-            // this.gradient.addColorStop("0.2", "#ff66b3");
-            // this.gradient.addColorStop("0.4", "#ccccff");
-            // this.gradient.addColorStop("0.6", "#b3ffff");
-            // this.gradient.addColorStop("0.8", "#80ff80");
-            // this.gradient.addColorStop("0.9", "#ffff33");
+
+            // this.gradient.addColorStop("0.1", "#80353A");
+            // this.gradient.addColorStop("0.2", "#f5f5f5");
+            // this.gradient.addColorStop("0.4", "#e2e5de");
+            // this.gradient.addColorStop("0.6", "#b2beb5");
+            // this.gradient.addColorStop("0.8", "#808080");
+            // this.gradient.addColorStop("0.9", "#676767");
 
             this.gradient.addColorStop("0.1", "#ffffff");
             this.gradient.addColorStop("0.2", "#f5f5f5");
@@ -174,7 +175,7 @@ function venomParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = "#696969";
+            ctx.fillStyle = "rgb(97, 0, 121)";
             ctx.fill();
         }
 
@@ -243,7 +244,7 @@ function venomParticles() {
             // let directionX = Math.random() * 5 - 1.5;
             // let directionY = Math.random() * 5 - 1.5;
 
-            let color = "rgb(255,255,255)";
+            let color = "rgb(0,0,0)";
 
             particleArray.push(
                 new Particle(x, y, directionX, directionY, size, color)
