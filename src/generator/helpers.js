@@ -1,11 +1,10 @@
-/** @format */
-
 const helpers = {
     isHome: (page) => page === "index",
-    getLink: (navEntry) => `/${navEntry.id}.html`,
-    getProjectLink: (page) => `/${page.outputFileName}.html`,
-    isCurrent: (navEntry, currentPage) =>
-        currentPage.id.startsWith(navEntry.id) ? "current" : null,
+    getLink: (navEntry) => `/${navEntry.id}`,
+    getProjectLink: (page) => `/${page.outputFileName}`,
+    getNavClass: (navEntry, currentPage) => {
+        return currentPage.id.startsWith(navEntry) ? "current" : null;
+    },
 };
 
 export default helpers;

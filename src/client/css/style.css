@@ -325,10 +325,7 @@ ul {
     );
     display: inline-block;
 
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
+    transition: transform 2s ease-out;
 }
 
 .projects-info a:hover {
@@ -339,7 +336,7 @@ ul {
     );
 
     display: inline-block;
-
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
     transform: scale(1.05);
 }
 /*---*/

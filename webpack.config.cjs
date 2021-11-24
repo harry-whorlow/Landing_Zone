@@ -16,6 +16,24 @@ const config = {
     devServer: {
         static: {
             directory: path.join(__dirname, "dist"),
+            serveIndex: false,
+        },
+        historyApiFallback: {
+            verbose: true,
+            htmlAcceptHeaders: ["text/html", "application/xhtml+xml"],
+            rewrites: [
+                {
+                    from: /^\/.*$/,
+                    to: (context) => {
+                        const { pathname } = context.parsedUrl;
+                        return `${
+                            pathname.endsWith("/")
+                                ? pathname.slice(0, -1)
+                                : pathname
+                        }.html`;
+                    },
+                },
+            ],
         },
         compress: true,
         port: 9000,

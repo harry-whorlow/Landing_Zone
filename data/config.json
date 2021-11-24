@@ -1,3 +1,13 @@
 {
-    "defaultTitle": "My Homepage"
+    "defaultTitle": "My Homepage",
+    "nav": [
+        {
+            "name": "about",
+            "link": "/about"
+        },
+        {
+            "name": "projects",
+            "link": "/projects"
+        }
+    ]
 }

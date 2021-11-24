@@ -1,7 +1,5 @@
 <nav>
-
-    <a href="/about.html" id="about">About</a>
-    <a href="/projects.html" id="projects">Projects</a>
-    <a href="/blog.html" id="blog">Blog</a>
-
+    {{#each config.nav}}
+        <a href="{{link}}" class="{{getNavClass name ..}}" id="blog">{{name}}</a>
+    {{/each}}
 </nav>
