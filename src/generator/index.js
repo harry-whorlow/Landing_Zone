@@ -51,13 +51,14 @@ async function loadMarkdown() {
 
 const DEFAULT_TEMPLATE = "_default";
 
-function renderPage(page) {
+function renderPage({ page, locals }) {
     return new Promise((resolve, reject) => {
         log(`Generating ${chalk.yellow(page.id)}...`);
         app.render(
             page.template || DEFAULT_TEMPLATE,
             {
                 ...page,
+                ...locals,
                 config,
                 labels,
             },
@@ -79,7 +80,7 @@ function renderPage(page) {
 (async () => {
     log(`Getting data from ${chalk.yellow(DATA_PATH)}:`);
     const data = await loadMarkdown();
-
+    const projects = data.filter((x) => x.id.startsWith("project"));
     const pages = [
         ...data,
         {
@@ -93,12 +94,21 @@ function renderPage(page) {
             id: "projects",
             outputFileName: "projects",
             template: "projects-list",
-            projects: data.filter((x) => x.id.startsWith("project")),
+            projects,
         },
     ];
 
     try {
-        const results = await Promise.all(pages.map(renderPage));
+        const results = await Promise.all(
+            pages.map((page) =>
+                renderPage({
+                    page,
+                    locals: {
+                        projects,
+                    },
+                })
+            )
+        );
         log(`Generated ${chalk.yellow(results.length)} pages`);
     } catch (error) {
         console.log(chalk.red(`[generator] Error generating site`));

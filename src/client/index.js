@@ -152,13 +152,13 @@ function venomParticles() {
     let mouse = {
         x: null,
         y: null,
-        radius: (canvas.height / 89) * (canvas.width / 80),
+        radius: (canvas.height / 100) * (canvas.width / 100),
     };
 
-    // window.addEventListener("mousemove", function (event) {
-    //     mouse.x = event.x;
-    //     mouse.y = event.y;
-    // });
+    window.addEventListener("mousemove", function (event) {
+        mouse.x = event.x;
+        mouse.y = event.y;
+    });
 
     class Particle {
         constructor(x, y, directionX, directionY, size, color) {
