@@ -1,5 +1,7 @@
 # landing Zone
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9097ccad-409a-4522-a037-9fa5c88ce94d/deploy-status)](https://app.netlify.com/sites/harry-whorlow/deploys)
+
 ## Installation
 
 ```bash
