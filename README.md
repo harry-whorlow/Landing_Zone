@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<!-- @format -->
-
-# Static homepage generator
+# landing Zone
 
 ## Installation
 
@@ -26,8 +23,3 @@ Build for production - in two separate tabs:
 $ npm run build:client
 $ npm run build:site
 ```
-=======
-# landing-zone
-# Landing_Zone
-# Landing_Zone
->>>>>>> 0591db5 (first commit)
