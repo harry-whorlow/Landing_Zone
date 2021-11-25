@@ -1,13 +1,16 @@
 <section class="page project">
-    <header>
-        <section>
+
+    <section>
+        <header>
             <h1>{{title}}</h1>
             <p>{{description}}</p>
-        </section>
-        <div class="gallery">
-            <img src="/assets/{{cover.default}}" class="" />
-        </div>
-    </header>
+        </header>
 
-    {{{pageContent}}}
+        <p>{{{pageContent}}}</p>
+    </section>
+
+    <div class="gallery">
+        <img src="/assets/{{cover.default}}" class="gallery-img" />
+    </div>
+
 </section>
