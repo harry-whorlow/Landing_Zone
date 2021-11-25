@@ -9,5 +9,13 @@
     },
     "footer": {
         "content": "© 2021 Harry Whorlow"
+    },
+    "meta": {
+        "description": "Harry Whorlow personal website",
+        "keywords": "front-end, back-end, javascript",
+        "site_name": "Harry Whorlow",
+        "url": "https://www.harrywhorlow.io/",
+        "title": "Harry Whorlow personal website",
+        "image": "https://www.harrywhorlow.io/homepage.jpeg"
     }
 }

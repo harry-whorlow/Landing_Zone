@@ -209,6 +209,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 
     background: rgb(29, 29, 29);
 
@@ -220,8 +221,6 @@ nav a:hover {
 
     display: flex;
     flex-direction: row;
-
-    overflow-x: hidden;
 }
 
 .about h1 {
@@ -550,8 +549,63 @@ body[class|="projects"] {
     font-weight: bold;
     font-family: "Courier New", Courier, monospace;
 }
-/*PROJECTS-PETITION*/
+
+.demo-link {
+    margin-top: 2rem;
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    color: white;
+
+    font-family: var(--ff-accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    line-height: 3rem;
+    padding: 0 1rem;
+
+    border-radius: 5px;
+
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    display: inline-block;
+
+    transition: transform 2s ease-out;
+}
+
+.demo-link:hover {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(253, 33, 84),
+        rgb(122, 15, 40) 90%
+    );
+
+    display: inline-block;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+/*ABUT*/
 /*------------------------*/
+
+.contact main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+
+    width: 960px;
+    margin: 0 auto;
+}
+
+.contact .contact-content {
+    margin-top: 10rem;
+}
 
 /*CANVAS*/
 /*------------------------*/
@@ -599,6 +653,7 @@ canvas {
     .index h1 {
         font-size: 8rem;
     }
+    .contact,
     .about-info {
         width: 100%;
         padding: 1rem;
