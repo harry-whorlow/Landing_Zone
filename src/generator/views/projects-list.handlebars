@@ -2,7 +2,7 @@
 
 <section class="projects-first-section">
 
-    <div class="projects-info">
+    <div class="projects-info text">
         <h1>{{labels.projects.title}}</h1>
         <p>{{labels.projects.subtitle}}</p>
 
@@ -33,31 +33,22 @@
         </ul>
     </div>
 </section>
-<hr class="divider" />
+{{! <hr class="divider" /> }}
 <section class="projects-second-section">
     {{#each projects}}
-        <a href="/{{outputFileName}}">
-            <article class="{{id}} project-con">
-                <h2>{{title}}</h2>
-                <p>{{description}}</p>
-                <div class="icon-con"></div>
+
+        <article class="{{id}} project-con text">
+
+            <h2><a href="/{{outputFileName}}">{{title}}</a></h2>
+
+            <p>{{description}}</p>
+            <div class="icon-con"></div>
+            <a href="/{{outputFileName}}">
                 <img src="/assets/{{cover.default}}" />
-            </article>
-        </a>
-        <hr class="divider" />
+            </a>
+        </article>
+
+        {{! <hr class="divider" /> }}
     {{/each}}
 
 </section>
-
-{{!-- <div class="social-network-project">
-        {{> socialNetwork}}
-    </div>
-    <hr class="subdivider" />
-    <div class="image-board-project">
-        {{> imageBoard}}
-
-    </div>
-    <hr class="subdivider" />
-    <div class="petition-project">
-        {{> petition}}
-    </div> --}}

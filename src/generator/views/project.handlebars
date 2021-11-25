@@ -1,16 +1,31 @@
 <section class="page project">
 
     <section>
-        <header>
+        <header class="text">
             <h1>{{title}}</h1>
             <p>{{description}}</p>
         </header>
 
-        <p>{{{pageContent}}}</p>
+        <div class="text">{{{pageContent}}}</div>
     </section>
+    <aside>
+        <div class="gallery">
+            <img src="/assets/{{cover.default}}" class="gallery-img" />
+        </div>
 
-    <div class="gallery">
-        <img src="/assets/{{cover.default}}" class="gallery-img" />
-    </div>
+        {{#demoLink}}
+        <p><a href="{{.}}">demo link</a></p>
+        {{/demoLink}}
+
+        <section class="techs">
+            <h3>used technologies</h3>
+
+            <ul class="techs-list">
+                {{#each technologies}}
+                <li>{{.}}</li>
+                {{/each}}
+            </ul>
+        </section>
+    </aside>
 
 </section>

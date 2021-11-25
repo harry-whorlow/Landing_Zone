@@ -3,7 +3,9 @@ const helpers = {
     getLink: (navEntry) => `/${navEntry.id}`,
     getProjectLink: (page) => `/${page.outputFileName}`,
     getNavClass: (navEntry, currentPage) => {
-        return currentPage.id.startsWith(navEntry) ? "current" : null;
+        return currentPage.id.startsWith(navEntry)
+            ? `${navEntry} current`
+            : navEntry;
     },
 };
 

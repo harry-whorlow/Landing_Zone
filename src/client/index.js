@@ -1,10 +1,24 @@
 (() => {
+    const $nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+        $nav.classList.toggle("scrolled", window.scrollY > 0);
+        document.body.classList.remove("nav-open");
+    });
+
+    $nav.querySelector("button").addEventListener("click", () =>
+        document.body.classList.toggle("nav-open")
+    );
     if (document.getElementById("vector-field")) {
         vectorField();
     }
 
     if (document.getElementById("venom-particles")) {
         venomParticles();
+    }
+
+    if (document.getElementById("globe")) {
+        textGlobe();
     }
 })();
 
@@ -145,7 +159,7 @@ function venomParticles() {
     let ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - 100;
 
     let particleArray = [];
 
@@ -173,7 +187,7 @@ function venomParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = "rgb(97, 0, 121)";
+            ctx.fillStyle = " rgb(253, 33, 84)";
             ctx.fill();
         }
 
@@ -274,7 +288,8 @@ function venomParticles() {
 
                 if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                     opacityValue = 1 - distance / 20000;
-                    ctx.strokeStyle = "rgba(255,255,255," + opacityValue + ")";
+                    ctx.strokeStyle =
+                        "rgba(255, 255, 255," + opacityValue + ")";
                     ctx.lineWidth = 1;
 
                     ctx.beginPath();
@@ -300,4 +315,42 @@ function venomParticles() {
 
     init();
     animate();
+}
+
+function textGlobe() {
+    const myTags = [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "React",
+        "Python",
+        "Vue",
+        "git",
+        "Node.js",
+        "MySQL",
+        "jQuery",
+        "AWS",
+    ];
+
+    var tagCloud = TagCloud(".globe", myTags, {
+        // radius in px
+        radius: 300,
+
+        // animation speed
+        // slow, normal, fast
+        maxSpeed: "fast",
+        initSpeed: "fast",
+
+        // 0 = top
+        // 90 = left
+        // 135 = right-bottom
+        direction: 135,
+
+        // interact with cursor move on mouse out
+        keep: true,
+    });
+
+    var colors = ["#0CFDD7"];
+    var random_color = colors[Math.floor(Math.random() * colors.length)];
+    document.querySelector(".globe").style.color = random_color;
 }
