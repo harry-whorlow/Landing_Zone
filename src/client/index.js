@@ -161,10 +161,8 @@ function venomParticles() {
     let canvas = document.getElementById("venom-particles");
     let ctx = canvas.getContext("2d");
 
-    canvas.width = document.documentElement.clientWidth;
-    canvas.height = document.documentElement.clientHeight;
-    // canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight - 100;
+    canvas.width = screen.width;
+    canvas.height = screen.height - 100;
 
     let particleArray = [];
 
