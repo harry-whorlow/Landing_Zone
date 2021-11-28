@@ -30,10 +30,8 @@ function vectorField() {
     window.onload = function () {
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
-
-        canvas.height = document.documentElement.clientHeight;
-        canvas.width = document.documentElement.clientWidth;
-
+        canvas.width = screen.width;
+        canvas.height = screen.height;
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
     };
