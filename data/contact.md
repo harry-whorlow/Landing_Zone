@@ -7,4 +7,4 @@ template: contact
 
 Get in touch with me over email at:
 
-whorlowharry@gmail.com
+(Harry Whorlow)[whorlowharry@gmail.com]
