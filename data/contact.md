@@ -3,6 +3,8 @@ title: Contact
 template: contact
 ---
 
-im avalble fo job oppertunitys
+#contact
 
-feel free to contack harry@harry.com
+Get in touch with me over email at:
+
+whorlowharry@gmail.com
