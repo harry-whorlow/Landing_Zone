@@ -40,8 +40,8 @@ function vectorField() {
         console.log("check");
         this.cancelAnimationFrame(flowFieldAnimation);
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = screen.width;
+        canvas.height = screen.height;
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
     });
