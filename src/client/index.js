@@ -31,8 +31,10 @@ function vectorField() {
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
 
-        canvas.width = window.screen.width;
-        canvas.height = window.screen.height;
+        canvas.width = 300;
+        canvas.height = 300;
+        //  canvas.width = window.innerWidth;
+        //  canvas.height = window.innerHeight;
 
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
@@ -42,8 +44,10 @@ function vectorField() {
         console.log("check");
         this.cancelAnimationFrame(flowFieldAnimation);
 
-        canvas.width = window.screen.width;
-        canvas.height = window.screen.height;
+        canvas.width = 300;
+        canvas.height = 300;
+        // canvas.width = window.screen.width;
+        // canvas.height = window.screen.height;
         // canvas.width = document.documentElement.clientWidth;
         // canvas.height = document.documentElement.clientHeight;
 
