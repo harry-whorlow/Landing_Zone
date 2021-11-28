@@ -27,20 +27,22 @@ function vectorField() {
     let ctx;
     let flowFieldAnimation;
 
+    let screenWidth = () => {
+        const mq = window.matchMedia("(min-width: 1025px)");
+
+        if (mq.matches) {
+            return window.outerWidth;
+        } else {
+            return window.innerWidth;
+        }
+    };
+
     window.onload = function () {
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
 
         canvas.height = window.innerHeight;
-        canvas.width = () => {
-            const mq = window.matchMedia("(min-width: 1025px)");
-
-            if (mq.matches) {
-                return window.outerWidth;
-            } else {
-                return window.innerWidth;
-            }
-        };
+        canvas.width = screenWidth;
 
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
