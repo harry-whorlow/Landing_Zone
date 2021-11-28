@@ -30,8 +30,10 @@ function vectorField() {
     window.onload = function () {
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
+
         canvas.width = document.documentElement.clientWidth;
         canvas.height = document.documentElement.clientHeight;
+
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
     };
@@ -42,6 +44,9 @@ function vectorField() {
 
         canvas.width = document.documentElement.clientWidth;
         canvas.height = document.documentElement.clientHeight;
+        //  canvas.width = window.innerWidth;
+        //  canvas.height = window.innerHeight;
+
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
     });
@@ -158,8 +163,10 @@ function venomParticles() {
     let canvas = document.getElementById("venom-particles");
     let ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight - 100;
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight - 100;
 
     let particleArray = [];
 
