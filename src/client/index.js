@@ -28,20 +28,19 @@ function vectorField() {
     let flowFieldAnimation;
 
     window.onload = function () {
-        if (
-            navigator.platform != "iPad" &&
-            navigator.platform != "iPhone" &&
-            navigator.platform != "iPod"
-        ) {
-            c.width = window.outerWidth;
-            //I'll use window.innerWidth in production
-        } else {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
+
+        canvas.height = window.innerHeight;
+        canvas.width = () => {
+            const mq = window.matchMedia("(min-width: 1025px)");
+
+            if (mq.matches) {
+                return window.outerWidth;
+            } else {
+                return window.innerWidth;
+            }
+        };
 
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
         flowField.animate(0);
@@ -169,18 +168,8 @@ function venomParticles() {
     let canvas = document.getElementById("venom-particles");
     let ctx = canvas.getContext("2d");
 
-    if (
-        navigator.platform != "iPad" &&
-        navigator.platform != "iPhone" &&
-        navigator.platform != "iPod"
-    ) {
-        canvas.width = window.outerWidth;
-        canvas.height = window.outerHeight - 100;
-        //I'll use window.innerWidth in production
-    } else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - 100;
-    }
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 100;
 
     let particleArray = [];
 
