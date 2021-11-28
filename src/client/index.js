@@ -31,7 +31,7 @@ function vectorField() {
         canvas = document.getElementById("vector-field");
         ctx = canvas.getContext("2d");
 
-        canvas.height = document.documentElement.clientWidth;
+        canvas.height = document.documentElement.clientHeight;
         canvas.width = document.documentElement.clientWidth;
 
         const flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
