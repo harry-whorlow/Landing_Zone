@@ -686,7 +686,6 @@ textarea {
     height: 300px;
     width: 100%;
     text-align: center;
-    color: white;
 }
 
 input,
@@ -694,6 +693,7 @@ textarea {
     background-color: var(--grey-100);
     border: 1px solid white;
     border-radius: 5px;
+    color: white;
 }
 
 .demo-link:hover {
