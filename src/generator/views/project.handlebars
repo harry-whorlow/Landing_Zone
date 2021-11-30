@@ -13,9 +13,15 @@
             <img src="/assets/{{cover.default}}" class="gallery-img" />
         </div>
 
-        {{#demoLink}}
-        <p><a href="{{.}}" class="demo-link">demo link</a></p>
-        {{/demoLink}}
+        <div class="project-links">
+            {{#demoLink}}
+            <p><a href="{{.}}" class="demo-link">demo link</a></p>
+            {{/demoLink}}
+
+            {{#codeLink}}
+            <p><a href="{{.}}" class="code-link">code link</a></p>
+            {{/codeLink}}
+        </div>
 
         <section class="techs">
             <h3>used technologies</h3>

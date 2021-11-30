@@ -8,8 +8,8 @@
     --grey-100: rgb(41, 41, 41);
     --grey-200: rgb(29, 29, 29);
     --grey-400: rgba(24, 24, 24, 0.8);
-    --blue: rgb(12, 253, 215);
-    --red: rgb(253, 33, 84);
+    --blue: rgb(14, 253, 217);
+    --red: rgb(247, 33, 82);
     --eggshell: rgba(255, 255, 255, 0.8);
 }
 * {
@@ -550,6 +550,12 @@ body[class|="projects"] {
     font-family: "Courier New", Courier, monospace;
 }
 
+.project-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .demo-link {
     margin-top: 2rem;
     background: -webkit-linear-gradient(
@@ -591,7 +597,48 @@ body[class|="projects"] {
     transform: scale(1.05);
 }
 
-/*ABUT*/
+.code-link {
+    margin-top: 2rem;
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    color: white;
+
+    font-family: var(--ff-accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    line-height: 3rem;
+    padding: 0 1rem;
+
+    border-radius: 5px;
+
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(253, 33, 84),
+        rgb(122, 15, 40) 90%
+    );
+    display: inline-block;
+
+    transition: transform 2s ease-out;
+}
+
+.code-link:hover {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+
+    display: inline-block;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+/*ABOUT*/
 /*------------------------*/
 
 .contact main {
@@ -605,6 +652,102 @@ body[class|="projects"] {
 
 .contact .contact-content {
     margin-top: 10rem;
+}
+
+/*CONTACT*/
+/*------------------------*/
+
+#contact-form {
+    /* border: 1px solid white; */
+    border-radius: 10px;
+
+    width: 500px;
+
+    padding: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 400;
+}
+
+textarea {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+input,
+textarea {
+    background-color: var(--grey-100);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.demo-link:hover {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(253, 33, 84),
+        rgb(122, 15, 40) 90%
+    );
+
+    display: inline-block;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+#contact-submit-btn {
+    border: none;
+
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(253, 33, 84),
+        rgb(122, 15, 40) 90%
+    );
+    color: white;
+
+    font-family: var(--ff-accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    line-height: 3rem;
+    padding: 0 2rem;
+
+    border-radius: 5px;
+
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+    display: inline-block;
+
+    transition: transform 2s ease-out;
+}
+
+#contact-submit-btn:hover {
+    background: -webkit-linear-gradient(
+        -30deg,
+        rgb(56, 179, 172),
+        rgb(36, 116, 136)
+    );
+
+    display: inline-block;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
 }
 
 /*CANVAS*/
