@@ -485,6 +485,10 @@ ul {
     color: var(--blue);
 }
 
+.projects-second-section h2:hover {
+    color: var(--red);
+}
+
 .icon-con {
     height: 100%;
     width: 100%;
