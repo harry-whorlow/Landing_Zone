@@ -59,32 +59,32 @@ function vectorField() {
     });
 
     class FlowFieldEffect {
-        #ctx;
-        #width;
-        #height;
+        ctx;
+        width;
+        height;
         constructor(ctx, width, height) {
-            this.#ctx = ctx;
-            this.#ctx.lineWidth = 1;
-            this.#ctx.strokeStyle = "white";
-            this.#width = width;
-            this.#height = height;
+            this.ctx = ctx;
+            this.ctx.lineWidth = 1;
+            this.ctx.strokeStyle = "white";
+            this.width = width;
+            this.height = height;
             this.lastTime = 0;
             this.interval = 1000 / 60;
             this.timer = 0;
             this.cellSize = 10;
             this.gradient;
-            this.#createGradient();
-            this.#ctx.strokeStyle = this.gradient;
+            this.createGradient();
+            this.ctx.strokeStyle = this.gradient;
             this.radius = 0;
             this.vr = 0.03;
         }
 
-        #createGradient() {
-            this.gradient = this.#ctx.createLinearGradient(
+        createGradient() {
+            this.gradient = this.ctx.createLinearGradient(
                 0,
                 0,
-                this.#width,
-                this.#height
+                this.width,
+                this.height
             );
 
             // this.gradient.addColorStop("0.1", "#80353A");
@@ -102,7 +102,7 @@ function vectorField() {
             this.gradient.addColorStop("0.9", "#676767");
         }
 
-        #drawLine(angle, x, y) {
+        drawLine(angle, x, y) {
             let positionX = x;
             let positionY = y;
             let dx = mouse.x - positionX;
@@ -116,33 +116,33 @@ function vectorField() {
                 distance = 100000;
             }
 
-            this.#ctx.beginPath();
-            this.#ctx.moveTo(x, y);
-            this.#ctx.lineTo(
+            this.ctx.beginPath();
+            this.ctx.moveTo(x, y);
+            this.ctx.lineTo(
                 x + Math.cos(angle) * length,
                 y + Math.sin(angle) * length
             ) * length;
-            this.#ctx.stroke();
+            this.ctx.stroke();
         }
         animate(timeStamp) {
             const deltaTime = timeStamp - this.lastTime;
             this.lastTime = timeStamp;
 
             if (this.timer > this.interval) {
-                this.#ctx.clearRect(0, 0, this.#width, this.#height);
+                this.ctx.clearRect(0, 0, this.width, this.height);
                 this.radius += this.vr;
 
                 if (this.radius > 10 || this.radius < -10) {
                     this.vr *= -1;
                 }
 
-                for (let y = 0; y < this.#height; y += this.cellSize) {
-                    for (let x = 0; x < this.#width; x += this.cellSize) {
+                for (let y = 0; y < this.height; y += this.cellSize) {
+                    for (let x = 0; x < this.width; x += this.cellSize) {
                         const angle =
                             (Math.cos(x * mouse.x * 0.00001) +
                                 Math.sin(y * mouse.y * 0.00001)) *
                             this.radius;
-                        this.#drawLine(angle, x, y);
+                        this.drawLine(angle, x, y);
                     }
                 }
 
