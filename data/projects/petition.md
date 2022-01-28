@@ -15,7 +15,7 @@ technologies:
     - Cookies
 
 demoLink: https://petition-twitter-api.herokuapp.com/
-codeLink: https://github.com/TheAngryEnglishman/petition
+codeLink: https://github.com/harry-whorlow/petition
 ---
 
 The petition project was a fun one for me, a light simple web application that combines the basics of frontend with some simple backend. In this project I really had fun experimenting with the styling and animations of the page. Introducing features such as Darkmode, allowed me to try out class based variables, and play around with transition effects.

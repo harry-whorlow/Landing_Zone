@@ -16,7 +16,7 @@ technologies:
     - Wish and a prayer
 
 # demoLink: https://github.com/TheAngryEnglishman/Image-Board
-codeLink: https://github.com/TheAngryEnglishman/Image-Board
+codeLink: https://github.com/harry-whorlow/Image-Board
 ---
 
 This was an interesting one for me. This was my first time using a front end library, and so getting used to Vue and writing a single page application for the first time I found it challenging. Getting used to the syntax and learning about Vue’s data and methods components took some time, and remembering to pass them along to each component took some getting used to, but, eventually I got there.

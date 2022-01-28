@@ -16,7 +16,7 @@ technologies:
     - Bycript
     - Cookies
 # demoLink: https://github.com/TheAngryEnglishman/Social-Network
-codeLink: https://github.com/TheAngryEnglishman/Social-Network
+codeLink: https://github.com/harry-whorlow/Social-Network
 ---
 
 The final project of the Spiced Bootcamp, the roaring crescendo if you will... The social network project was a good test of all our skills, combining front-end and back-end in one unified project made for a good balance of nitty gritty javaScript with front-end creativity.
