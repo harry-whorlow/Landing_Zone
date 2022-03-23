@@ -3,7 +3,9 @@ title: About me
 template: about
 ---
 
-It wasn't before long decided I wanted a career in this field. So dropping everything I applied, attended and completed an intensive code bootcamp at Spiced Academy in late 2021. Since then I’ve widened my knowledge base completing various courses in topics such as machine learning, advanced javascript and blockchain based systems. Alongside an internship at The Planetary Emergency Hub where I demonstrated my abilities in front and back end systems, whilst also gaining an insight to the Hyperledger open source blockchain.
+It wasn't before long decided I wanted a career in this field. So dropping everything I applied, attended and completed an intensive code bootcamp at Spiced Academy in late 2021.
+
+Since then I’ve widened my knowledge base completing various courses in topics such as machine learning, advanced javascript and blockchain based systems. Alongside an internship at The Planetary Emergency Hub where I demonstrated my abilities in front and back end systems, whilst also gaining an insight to the Hyperledger open source blockchain.
 
 ## skills & experience
 
