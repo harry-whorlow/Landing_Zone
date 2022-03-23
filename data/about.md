@@ -3,7 +3,7 @@ title: About me
 template: about
 ---
 
-I am a full-stack developer in my early twenties. I started my coding journey in Python, beginning with simple programs that would scrape the web for financial documents and compile them using Numpy and MatplotLib. It wasn't before long that I decided I wanted to pursue a career in this industry. I am currently attending a coding boot camp, where I am developing my full-stack skill set.
+It wasn't before long decided I wanted a career in this field. So dropping everything I applied, attended and completed an intensive code bootcamp at Spiced Academy in late 2021. Since then I’ve widened my knowledge base completing various courses in topics such as machine learning, advanced javascript and blockchain based systems. Alongside an internship at The Planetary Emergency Hub where I demonstrated my abilities in front and back end systems, whilst also gaining an insight to the Hyperledger open source blockchain.
 
 ## skills & experience
 
